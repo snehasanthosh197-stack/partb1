@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>registation</title>
+        <link rel="stylesheet"href="style.css">
+        </head>
+        <body>
+            <header>
+                <h1>event registation</h1>
+            </header>
+            <nav>
+                <a href="index.html">home</a>
+                <a href="events.html">event</a>
+                <a href="registration.html">register</a>
+                <a href="contact.html">contact</a>
+                </nav>
+                <div class="content">
+                    <h2>student registation</h2>
+                    <form onsubmit="registerstudent(event)">
+                    <label>naME:</label>
+                    <input type="text"id="name"requried>
+                    <label>email:</label>
+                    <input type="email"requried>
+                    <label>department:</label>
+                    <input type="text"requried>
+                    <label>select event:</label>
+                    <select id="event"requried>
+                        <option value="">select event</option>
+                        <option>web development workshop</option>
+                        <option>quiz competiton</option>
+                        <option>coding competitiom</option>
+                        </select>
+                        <button type="submit">register</button>
+                        </form>
+                        <p id="message"></p>
+                        </div>
+                        <script>
+                            function registerstudent(event){
+                                event.preventDefault();
+                                let name=document.getElementById("name").value;
+                                let eventName=document.getElementById("event").value;
+                                document.getElementById("message").innerHTML= 
+                                "successfully registered!<br>"+
+                                "welcome"+name+"<br>"+
+                                "event:"+eventName;
+                                document.getElementById("message").style.display="block";}
+                            </script>
+                            </body>
+                            </html>
